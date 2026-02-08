@@ -20,11 +20,12 @@ class Weave < Formula
       system "cargo", "install", *std_cargo_args(path: "weave-driver")
       system "cargo", "install", *std_cargo_args(path: "weave-mcp")
     end
+    bin.install_symlink "weave-cli" => "weave"
   end
 
   test do
-    # Test that weave-cli can run the benchmark
-    output = shell_output("#{bin}/weave-cli bench 2>&1")
+    # Test that `weave` symlink works and can run the benchmark
+    output = shell_output("#{bin}/weave bench 2>&1")
     assert_match "weave merge benchmark", output
     assert_match "clean merges", output
 
