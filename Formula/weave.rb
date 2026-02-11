@@ -1,8 +1,8 @@
 class Weave < Formula
   desc "Entity-level semantic merge driver for Git — resolves conflicts by understanding code structure"
   homepage "https://github.com/Ataraxy-Labs/weave"
-  url "https://github.com/Ataraxy-Labs/weave/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "a98a1fa836a4cfd5c05a374182917bce374bcef55374560893393c62150c95e3"
+  url "https://github.com/Ataraxy-Labs/weave/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "3e2331822b0788b02b8b62891e51534828d74226aebd509af4aa8984f3fd4477"
   license "MIT"
   head "https://github.com/Ataraxy-Labs/weave.git", branch: "main"
 
@@ -20,12 +20,11 @@ class Weave < Formula
       system "cargo", "install", *std_cargo_args(path: "weave-driver")
       system "cargo", "install", *std_cargo_args(path: "weave-mcp")
     end
-    bin.install_symlink "weave-cli" => "weave"
   end
 
   test do
-    # Test that `weave` symlink works and can run the benchmark
-    output = shell_output("#{bin}/weave bench 2>&1")
+    # Test that weave-cli can run the benchmark
+    output = shell_output("#{bin}/weave-cli bench 2>&1")
     assert_match "weave merge benchmark", output
     assert_match "clean merges", output
 
