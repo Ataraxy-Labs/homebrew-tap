@@ -1,8 +1,8 @@
 class Weave < Formula
   desc "Entity-level semantic merge driver for Git — resolves conflicts by understanding code structure"
   homepage "https://github.com/Ataraxy-Labs/weave"
-  url "https://github.com/Ataraxy-Labs/weave/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "3e2331822b0788b02b8b62891e51534828d74226aebd509af4aa8984f3fd4477"
+  url "https://github.com/Ataraxy-Labs/weave/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "f1125f8bee05eca20759359978fecd54289bd010806da9288d2ba315d8d738ce"
   license "MIT"
   head "https://github.com/Ataraxy-Labs/weave.git", branch: "main"
 
