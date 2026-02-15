@@ -1,9 +1,9 @@
 class Weave < Formula
   desc "Entity-level semantic merge driver for Git — resolves conflicts by understanding code structure"
   homepage "https://github.com/Ataraxy-Labs/weave"
-  url "https://github.com/Ataraxy-Labs/weave/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "f1125f8bee05eca20759359978fecd54289bd010806da9288d2ba315d8d738ce"
-  license "MIT"
+  url "https://github.com/Ataraxy-Labs/weave/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "9e47113b5b17377bf804935c394b37499b88d961de862d5b79cd48febc7b2b6a"
+  license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/Ataraxy-Labs/weave.git", branch: "main"
 
   livecheck do
@@ -23,8 +23,8 @@ class Weave < Formula
   end
 
   test do
-    # Test that weave-cli can run the benchmark
-    output = shell_output("#{bin}/weave-cli bench 2>&1")
+    # Test that weave can run the benchmark
+    output = shell_output("#{bin}/weave bench 2>&1")
     assert_match "weave merge benchmark", output
     assert_match "clean merges", output
 
