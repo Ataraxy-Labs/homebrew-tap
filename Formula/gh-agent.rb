@@ -2,7 +2,7 @@ class GhAgent < Formula
   desc "Agent-friendly GitHub CLI for PR reviews"
   homepage "https://github.com/Ataraxy-Labs/gh-agent"
   url "https://github.com/Ataraxy-Labs/gh-agent/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "2b699aac6c3c60c6478accc277f764322b74c2d7d42250e43281eb0052b66969"
+  sha256 "2e9c17e801f9be811d15662db442882193fc16a489aee321fbc8c77141b236bb"
   license "MIT"
 
   depends_on "rust" => :build
