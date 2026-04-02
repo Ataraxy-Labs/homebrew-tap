@@ -1,8 +1,8 @@
 class Sem < Formula
   desc "Semantic version control CLI — entity-level diffs on top of Git"
   homepage "https://github.com/Ataraxy-Labs/sem"
-  url "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.3.8.tar.gz"
-  sha256 "08453cf7809510148db7c12c370bba18bd709aa15a38026aebd56d7f5e039bfa"
+  url "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.3.12.tar.gz"
+  sha256 "82578bd507d5b4095867ddf45f7ff41a51cbf2efaa731735af203b0d39579380"
   license "MIT"
 
   depends_on "rust" => :build
